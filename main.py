@@ -13,11 +13,11 @@ running:bool = True
 def restart_program() -> None:
     global running
     print("Programm is restarting")
-    sleep(4)
+    sleep(3)
     os.system("color 7")
     os.system("cls")
     running = False # once the loop ends here the programm restart the programm 
-    keyboard.write("python data.py")
+    keyboard.write("python main.py")
     keyboard.press_and_release('enter')
 
 @lambda _: _()
@@ -204,4 +204,5 @@ def main() -> None:
                 os.system("cls")
                 print("\nwrong input")
 
-        except KeyboardInterrupt:keyboard_restart()
+        except KeyboardInterrupt:
+            quit()
